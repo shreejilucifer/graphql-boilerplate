@@ -1,3 +1,4 @@
 {
-  "DBURL": "mongodb://localhost/mydb"
+  "DBURL": "mongodb://localhost/mydb",
+  "APPSECRET": "mycoolsecret"
 }

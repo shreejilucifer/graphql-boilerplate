@@ -6,6 +6,7 @@ const UserSchema = mongoose.Schema({
   id: { type: Schema.ObjectId, auto: true },
   name: { type: String },
   email: { type: String },
+  password: { type: String },
   age: { type: Number }
 });
 

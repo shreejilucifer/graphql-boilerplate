@@ -1,12 +1,25 @@
 const users = require('./queries/users');
 const createuser = require('./mutations/createuser');
+const loginuser = require('./mutations/loginuser');
+const counter = require('./subscriptions/counter');
 
 const Queries = {
   users
 };
 
 const Mutations = {
-  createuser
+  createuser,
+  loginuser
 };
 
-module.exports = { Query: Queries, Mutation: Mutations };
+const Subscriptions = {
+  counter: {
+    subscribe: counter
+  }
+};
+
+module.exports = {
+  Query: Queries,
+  Mutation: Mutations,
+  Subscription: Subscriptions
+};

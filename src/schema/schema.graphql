@@ -6,19 +6,45 @@ type Query {
 # Mutations
 type Mutation {
   createuser(data: CreateUserInput): User!
+  loginuser(data: LoginInput): AuthPayload!
 }
+
+# Subscriptions
+type Subscription {
+  counter: Counter!
+}
+
+############################################################
 
 # Inputs
 input CreateUserInput {
   name: String!
   email: String!
+  password: String!
   age: Int
 }
+
+input LoginInput {
+  email: String!
+  password: String!
+}
+
+############################################################
 
 # User
 type User {
   id: ID!
   name: String!
   email: String!
+  password: String!
   age: Int
+}
+
+type AuthPayload {
+  user: User
+  token: String
+}
+
+type Counter {
+  count: Int!
 }
