@@ -7,9 +7,12 @@ const pubsub = new PubSub();
 const server = new GraphQLServer({
   typeDefs: './src/schema/schema.graphql',
   resolvers: resolvers,
-  context: {
-    db,
-    pubsub
+  context: request => {
+    return {
+      db,
+      pubsub,
+      request
+    };
   }
 });
 

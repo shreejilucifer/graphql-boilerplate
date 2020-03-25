@@ -1,6 +1,7 @@
 # Queries
 type Query {
   users: [User!]!
+  hello: String!
 }
 
 # Mutations

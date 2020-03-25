@@ -1,10 +1,13 @@
 const users = require('./queries/users');
+const hello = require('./queries/hello');
+
 const createuser = require('./mutations/createuser');
 const loginuser = require('./mutations/loginuser');
 const counter = require('./subscriptions/counter');
 
 const Queries = {
-  users
+  users,
+  hello
 };
 
 const Mutations = {
