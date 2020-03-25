@@ -1,0 +1,4 @@
+{
+  "DBURL": "mongodb://shreeji:shreeji98@ds121996.mlab.com:21996/graphql-boilerplate",
+  "APPSECRET": "myproductionsecret"
+}
